@@ -5,7 +5,7 @@
 For now just the sql file containing the tables from the project will be on here
 but in the future I will add the PHP files that will make up our web interface.
 
-### What we have so far
+## What we have so far
 * ecom.sql
 * footer/header.php
   * This is just a footer and header that goes on every page. I always put them in their own file so I dont have to write the same thing over and over.
