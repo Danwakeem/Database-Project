@@ -1,6 +1,6 @@
 #Hey there team,
 
-## Our project is going to be mighty cool! :)
+### Our project is going to be mighty cool! :)
 
 For now just the sql file containing the tables from the project will be on here
 but in the future I will add the PHP files that will make up our web interface.
@@ -18,7 +18,7 @@ but in the future I will add the PHP files that will make up our web interface.
 * login_success.php
   * This is just a crappy little page the user is sent to after they login sucessfully :)
 
-### What is coming soon
+## What is coming soon
 
 * index.php
 * shopping_page.php
