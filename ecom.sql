@@ -24,11 +24,12 @@ DROP TABLE IF EXISTS `category`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cat_name` varchar(128) DEFAULT NULL,
-  `parent_id` int(11) DEFAULT NULL,
+  `cat_name` varchar(128) NOT NULL,
+  `parent_id` int(11) DEFAULT '-1',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `cat_name_UNIQUE` (`cat_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +38,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (1,'Books',-1),(3,'Fiction',1),(6,'Non-Fiction',1);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,7 +210,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `credit_card_UNIQUE` (`credit_card`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +219,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Danwakeem','password','12344',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'Danwakeem','password','12344',NULL,NULL,NULL,NULL,NULL,NULL),(2,'CoolCrab21','password','1234567891234567','Kyle','Brofloski','2700 Mountain View Dr','Boobladesh','California','75534'),(3,'DinoMaster34','password','1234567891235555','Stan','Marsh','2905 Turtle Creek Dr.','Vancover','Oregon','79336');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -230,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-04  9:34:34
+-- Dump completed on 2014-11-04  9:49:11
