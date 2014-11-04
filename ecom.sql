@@ -198,7 +198,7 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  `credit_card` int(11) DEFAULT NULL,
+  `credit_card` int(16) DEFAULT NULL,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
   `street` varchar(45) DEFAULT NULL,
@@ -230,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-03 21:12:55
+-- Dump completed on 2014-11-04  9:27:45
