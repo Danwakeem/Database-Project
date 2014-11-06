@@ -27,9 +27,12 @@
 		$numberOfDays = 7;
 		$dateOfExpiry = time() + 60 * 60 * 24 * $numberOfDays ;
 		$id = mysqli_fetch_array($result);
-		setcookie("usrId", $id[0], $dateOfExpiry);
+		session_start();
+		$_SESSION['usrId'] = $id[0];
+		$_SESSION['username'] = $id[1];
+		//setcookie("usrId", $id[0], $dateOfExpiry);
 		// Redirect to the login page.
-		header("location:login_success.php");
+		header("location:index.php");
 	}
 	else {
 		echo "Wrong username and or Password. Sorry.";

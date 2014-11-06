@@ -17,10 +17,13 @@ but in the future I will add the PHP files that will make up our web interface.
   * This is where what the user entered in on the login.php page is check against the database. There is a slight problem when the user enters in something that is not in the database but I will fix that later.
 * login_success.php
   * This is just a crappy little page the user is sent to after they login sucessfully :)
+* index.php
+  * This is the main page of the site. I added a cool little navigation bar at the top so you can see if you are signed in or search for a product.
+* product_page.php
+  * This is where you would view a product and or add it to your cart. This page is still a work in progress but it is a shell of a page so I added it here.
 
 ## What is coming soon
 
-* index.php
 * shopping_page.php
 * search.php
 
