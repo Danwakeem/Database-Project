@@ -46,3 +46,27 @@ INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
 ('VHS', 2);
+
+--
+-- Donald's categories
+--
+
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Cards', -1);
+
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Magic: The Gathering', 3);
+
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Pokemon', 3);
+
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Yu-Gi-Oh', 3);
