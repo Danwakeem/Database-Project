@@ -38,4 +38,6 @@
 	<a class="load_more btn btn-primary"><i class="fa fa-bicycle fa-fw"></i> More products</a>
 </div>
 
+<script src="js/common.js"></script>
+
 <?php include_once 'footer.php'; ?>

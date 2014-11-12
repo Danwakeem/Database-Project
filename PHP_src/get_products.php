@@ -52,6 +52,24 @@
 		}
 	} 
 
+	function userProducts($userId){
+		include 'dbConnect.php';
+		$productTable = "product";
+
+		$con = dbConnect();
+		$sql = "SELECT * FROM $productTable WHERE sold != 1 AND user_id = $userId LIMIT 10";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			$arr = [];
+			$i = 0;
+			while($row = mysqli_fetch_array($result)){
+				$arr[$i++] = $row;
+			}
+			return $arr;
+		}
+	} 
+
 	function mainPageGetMore(){
 		session_start();
 		include 'dbConnect.php';
