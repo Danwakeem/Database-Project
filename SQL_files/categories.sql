@@ -70,3 +70,29 @@ INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
 ('Yu-Gi-Oh', 3);
+
+
+--
+--Kai's categories
+--
+
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Music', -1);
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Pop', 4);
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Rock', 4);
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Hip-Hop', 4);
+INSERT INTO `ecom`.`category`
+(`cat_name`, `parent_id`)
+VALUES
+('Country', 4);
