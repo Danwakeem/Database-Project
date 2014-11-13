@@ -7,21 +7,21 @@ INSERT INTO `ecom`.`category`
 `parent_id`)
 VALUES
 ('Books',
--1);
+'none');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`,
 `parent_id`)
 VALUES
 ('Non-Fiction',
-1);
+'Books');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`,
 `parent_id`)
 VALUES
 ('Fiction',
-1);
+'Books');
 
 --
 -- Matt's categories
@@ -30,22 +30,22 @@ VALUES
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Movies', -1);
+('Movies', 'none');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('DVD', 2);
+('DVD', 'Movies');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Bluray', 2);
+('Bluray', 'Movies');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('VHS', 2);
+('VHS', 'Movies');
 
 --
 -- Donald's categories
@@ -54,22 +54,22 @@ VALUES
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Cards', -1);
+('Cards', 'none');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Magic: The Gathering', 3);
+('Magic: The Gathering', 'Cards');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Pokemon', 3);
+('Pokemon', 'Cards');
 
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Yu-Gi-Oh', 3);
+('Yu-Gi-Oh', 'Cards');
 
 
 --
@@ -79,20 +79,20 @@ VALUES
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Music', -1);
+('Music', 'none');
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Pop', 4);
+('Pop', 'Music');
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Rock', 4);
+('Rock', 'Music');
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Hip-Hop', 4);
+('Hip-Hop', 'Music');
 INSERT INTO `ecom`.`category`
 (`cat_name`, `parent_id`)
 VALUES
-('Country', 4);
+('Country', 'Music');
