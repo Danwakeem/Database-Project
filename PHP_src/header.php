@@ -28,15 +28,29 @@
 		            <a class="navbar-brand" href="index.php">BlackBOX Books</a>
 		        </div>
 		        <?php if(isset($_SESSION['usrId'])): ?>
-		              	<p class="navbar-text">Signed in as <?php echo $_SESSION['username']; ?></p>
-		              <?php else: ?>
-		              	<a href="login.php"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
-		              <?php endif; ?>
-		            <form class="navbar-form navbar-right" role="search">
-  						<div class="form-group">
-    						<input type="text" class="form-control" placeholder="Search">
-  						</div>
-  						<button type="submit" class="btn btn-default">Submit</button>
-					</form>
+		            <p class="navbar-text">Signed in as <?php echo $_SESSION['username']; ?></p>
+		        <?php else: ?>
+		        	<a href="login.php"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
+		        <?php endif; ?>
+		        <form class="navbar-form navbar-right" role="form" method="POST" action="search.php">
+  					<div class="form-group">
+    					<input name="search" id="search" type="text" class="form-control" placeholder="Search">
+  					</div>
+  					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+		        	<li class="dropdown">
+		        		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		        			Categories
+		        			<span class="caret"></span>
+		        		</a>
+		        		<ul class="dropdown-menu" role="menu">
+		        			<li><a href="category.php?category=Books">Books</a></li>
+		        			<li class="divider"></li>
+		        			<li><a href="category.php?category=Fiction">  Fiction</a></li>
+		        			<li><a href="category.php?category=Non-Fiction">  Non-Fiction</a></li>
+		        		</ul>
+		        	</li>
+		        </ul>
 		        </div><!--/.nav-collapse -->
 	    </nav>

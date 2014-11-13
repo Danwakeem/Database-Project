@@ -5,7 +5,7 @@
 <div class="jumbotron">
 	<h1>Welcome to BlackBOX.</h1>
     	<p>Here at blackBOX you will find a ton of exciting products from some exciting people. If you need something at a good price you should type what you need in the search box above. Happy hunting.</p>
-        <p><a class="btn btn-lg btn-primary" href="#" role="button">Recent Products</a></p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Recent Products</a></p> -->
 </div>
 
 <h1>Recent Products</h1>
@@ -38,6 +38,5 @@
 	<a class="load_more btn btn-primary"><i class="fa fa-bicycle fa-fw"></i> More products</a>
 </div>
 
-<script src="js/common.js"></script>
 
 <?php include_once 'footer.php'; ?>

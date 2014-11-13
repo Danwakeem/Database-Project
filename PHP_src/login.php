@@ -26,9 +26,6 @@
             <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
             <input name="mypassword" id="mypassword" class="form-control" type="password" placeholder="Password">
           </div>
-          <label class="checkbox">
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
       </div><!-- /margin-top-login -->
