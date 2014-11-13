@@ -24,8 +24,8 @@ but in the future I will add the PHP files that will make up our web interface.
 
 ## What is coming soon
 
-* shopping_page.php
-* search.php
+* page to upload a new product
+* more fixes to existing pages
 
 Good luck gang,
 Dan Jarvis
