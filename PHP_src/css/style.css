@@ -112,6 +112,10 @@ a:hover{
   margin: 30px 0px;
 }
 
+.margin-left{
+  margin-left: 20%;
+}
+
 /* Not sure if this is relevent */
 
 .form-signin {

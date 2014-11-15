@@ -74,68 +74,85 @@
 					<?php elseif(isset($_GET['settings'])): ?>
 						<div class="user-account-settings">
 							<form role="form" method="POST" action="">
-								<div class="settings-group">
-									<h3>Username</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control username" type="text" placeholder="Username">
+								<div class="row">
+									<div class="col-md-1">
+										<i class="fa fa-user fa-2x" style="margin-top: 23px;"></i>
+									</div>
+									<div class="col-md-11">
+										<h2>Account</h2>
+									</div>
+								<div class="margin-left">
+									<div class="settings-group">
+										<p>Username</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control username" type="text" placeholder="Username">
+										</div>
+									</div>
+									<div class="settings-group">
+										<p>Password</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control password" type="password" placeholder="Password">
+										</div>
+									</div>
+									<div class="settings-group">
+										<p>Email</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control email" type="text" placeholder="Email address">
+										</div>
 									</div>
 								</div>
-								<div class="settings-group">
-									<h3>First Name</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control first-name" type="text" placeholder="First name">
+								<div class="row">
+									<div class="col-md-1">
+										<i class="fa fa-building-o fa-2x" style="margin-top: 23px;"></i>
+									</div>
+									<div class="col-md-11">
+										<h2>Billing</h2>
 									</div>
 								</div>
-								<div class="settings-group">
-									<h3>Last Name</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control last-name" type="text" placeholder="Last name">
+								<div class="margin-left">
+									<div class="settings-group">
+										<p>State</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-location-arrow fa-fw"></i></span><input class="form-control state" type="text" placeholder="State">
+										</div>
+									</div>
+									<div class="settings-group">
+										<p>Street</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-cab fa-fw"></i></span><input class="form-control street" type="text" placeholder="Street">
+										</div>
+									</div>
+									<div class="settings-group">
+										<p>City</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-building-o fa-fw"></i></span><input class="form-control city" type="text" placeholder="City">
+										</div>
+									</div>
+									<div class="settings-group">
+										<p>Zip</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control zip" type="text" placeholder="Zip">
+										</div>
 									</div>
 								</div>
-								<div class="settings-group">
-									<h3>Email</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control email" type="text" placeholder="Email address">
+								<div class="row">
+									<div class="col-md-1">
+										<i class="fa fa-credit-card fa-2x" style="margin-top: 23px;"></i>
 									</div>
-								</div>
-								<div class="settings-group">
-									<h3>State</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-location-arrow fa-fw"></i></span><input class="form-control state" type="text" placeholder="State">
+									<div class="col-md-11">
+										<h2>Credit Card</h2>
 									</div>
-								</div>
-								<div class="settings-group">
-									<h3>Street</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-cab fa-fw"></i></span><input class="form-control street" type="text" placeholder="Street">
-									</div>
-								</div>
-								<div class="settings-group">
-									<h3>City</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-building-o fa-fw"></i></span><input class="form-control city" type="text" placeholder="City">
-									</div>
-								</div>
-								<div class="settings-group">
-									<h3>Zip</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span><input class="form-control zip" type="text" placeholder="Zip">
-									</div>
-								</div>
-								<div class="settings-group">
-									<h3>Password</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control password" type="password" placeholder="Password">
-									</div>
-								</div>
-								<div class="settings-group">
-									<h3>Credit card number</h3>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-credit-card fa-fw"></i></span><input class="form-control credit-card" type="password" placeholder="CC Number">
+								<div class="margin-left">
+									<div class="settings-group">
+										<p>Credit card number</p>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-credit-card fa-fw"></i></span><input class="form-control credit-card" type="password" placeholder="CC Number">
+										</div>
 									</div>
 								</div>
 								<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 							</form>
+						</div>
 					<?php else: ?>
 						<?php $postings =  userProducts($userId); ?>
 						<h1>Recent Postings</h1>

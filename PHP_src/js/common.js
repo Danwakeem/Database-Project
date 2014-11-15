@@ -24,13 +24,15 @@ var toType = function(obj) {
 
 $(document).ready(function(){
 	$('.fa-shopping-cart').click(function(){
-		$.ajax({url: 'get_products.php',
-		 data: {action: 'getCart'},
-		 type: 'post',
-		 success: function(output){
-		 		addToCart(output);
-		 }
-		});
+		if($('.modal-body').is(':empty')){
+			$.ajax({url: 'get_products.php',
+			 data: {action: 'getCart'},
+			 type: 'post',
+			 success: function(output){
+			 		addToCart(output);
+			 }
+			});
+		}
 	});
 	$('.add-cart').click(function(){
 		var prodId = $('#prod-id').text();
