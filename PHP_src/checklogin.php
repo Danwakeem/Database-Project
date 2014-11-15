@@ -24,10 +24,14 @@
 	// If result matched $myusername and $mypassword, table row must be 1 row
 	if($result->num_rows == 1) {
 		// Setting a cookie so the user can login once and not have to login again.
-		$numberOfDays = 7;
-		$dateOfExpiry = time() + 60 * 60 * 24 * $numberOfDays ;
+		//$numberOfDays = 7;
+		//$dateOfExpiry = time() + 60 * 60 * 24 * $numberOfDays ;
 		$id = mysqli_fetch_array($result);
+		$statement = "SELECT * FROM orders WHERE user_id = $id[0] AND processed = 0";
+		$res = mysqli_query($con,$statement);
+		$shopping = mysqli_fetch_array($res);
 		session_start();
+		$_SESSION['shoppingCartId'] = $shopping[0];
 		$_SESSION['usrId'] = $id[0];
 		$_SESSION['username'] = $id[1];
 		//setcookie("usrId", $id[0], $dateOfExpiry);

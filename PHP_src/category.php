@@ -8,6 +8,8 @@
 ?>
 
 <div class="recent-products">
+	<h1><?php echo $category; ?></h1>
+	<hr>
 	<?php foreach($products as $row): ?>
 		<div class="product-posts">
 			<div class="row">

@@ -9,6 +9,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/user-profile.js" ></script>
+    
   </body>
   </html>

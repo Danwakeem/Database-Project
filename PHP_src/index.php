@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="col-md-8">
-					<h3><a href="product_page.php?id=<?php echo $row[0]; ?>"><?php echo $row[1]; ?></a></h2>
+					<h3><a href="product_page.php?id=<?php echo $row[0]; ?>"><?php echo $row[1]; ?></a></h3>
 					<hr>
 					<p><?php echo $row[2]; ?></p>
 				</div>

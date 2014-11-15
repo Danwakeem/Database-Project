@@ -7,6 +7,55 @@
 			case 'mainPageGet': mainPageGetMore(); break;
 			case 'loadMoreSearches': loadMoreSearches(); break;
 			case 'moreFromCategory': moreFromCategory(); break;
+			case 'addToCart' : $prod_id = $_POST['proId']; addToShoppingCart($prod_id); break;
+			case 'getCart' : getShoppingCart(); break;
+		}
+	}
+
+	function getShoppingCart(){
+		include 'dbConnect.php';
+		session_start();
+		$prodOrders = 'product_orders';
+		$cartId = $_SESSION['shoppingCartId'];
+		$products = 'product';
+
+		$con = dbConnect();
+		$sql = "SELECT p.* FROM $products as p, $prodOrders as po WHERE po.order_id = $cartId AND po.product_id = p.id";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			$arr = array();
+			while($row = mysqli_fetch_array($result)){
+				$arr[] = array(
+      				'id' => $row['id'],
+      				'prod_name' => $row['prod_name'],
+      				'prod_desc' => $row['prod_desc'],
+      				'price' => $row['price'],
+      				'user_id' => $row['user_id']
+   				);
+			}
+			echo json_encode($arr);
+		}
+		else {
+			echo "sorry";
+		}
+	}
+
+	function addToShoppingCart($prod_id){
+		include 'dbConnect.php';
+		$prodOrders = 'product_orders';
+		session_start();
+		$cartId = $_SESSION['shoppingCartId'];
+
+		$con = dbConnect();
+		$sql = "INSERT INTO $prodOrders VALUES ($cartId,$prod_id)";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			echo 0;
+		}
+		else {
+			echo -1;
 		}
 	}
 
@@ -43,6 +92,7 @@
 			$arr = array();
 			while($row = mysqli_fetch_array($result)){
 				$arr = array(
+					'id' => $row['id'],
 					'username' => $row['username'],
 					'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
@@ -53,6 +103,24 @@
 			return $arr;
 		}
 	} 
+
+	function userReviews($userId){
+		include 'dbConnect.php';
+		$reviewTable = 'reviews';
+
+		$con = dbConnect();
+		$sql = "SELECT * FROM $reviewTable WHERE user_id = $userId ORDER BY review_id DESC";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			$arr = [];
+			$i = 0;
+			while($row = mysqli_fetch_array($result)){
+				$arr[$i++] = $row;
+			}
+			return $arr;
+		}	
+	}
 
 	function userProducts($userId){
 		include 'dbConnect.php';

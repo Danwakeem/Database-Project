@@ -14,6 +14,7 @@
 						<div class="list-group">
 	  						<a class="list-group-item" href="user_profile.php?id=<?php echo $userId; ?>"><i class="fa fa-pencil fa-fw"></i>&nbsp; Recent Postings</a>
 							<a class="list-group-item sold" href="user_profile.php?id=<?php echo $userId; ?>&sold=1"><i class="fa fa-check fa-fw"></i>&nbsp; Sold</a>
+							<a class="list-group-item reviews" href="user_profile.php?id=<?php echo $userId; ?>&reviews=1"><i class="fa fa-newspaper-o"></i>&nbsp; Reviews</a>
 							<?php if(isset($_SESSION['usrId']) && $userId == $_SESSION['usrId']): ?> 
 								<a class="list-group-item settings" href="user_profile.php?id=<?php echo $userId; ?>&settings=1"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
 							<?php endif; ?>
@@ -43,6 +44,32 @@
 								</div>
 							</div>
 							<hr>
+						<?php endforeach; ?>
+					<?php elseif(isset($_GET['reviews'])): ?>
+						<?php $reviews = userReviews($userId); ?>
+						<h1>Reviews</h1>
+						<hr>
+						<?php foreach ($reviews as $row): ?>
+							<div class="product-posts">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="row">
+											<a href="user_profile.php?id=<?php echo $row[2]; ?>"><img src="img_default/default-user.jpg" style="width:100%;height:100%;"></a>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<?php for($i = 0; $i < 5; $i++): ?>
+											<?php if(($row[4] - $i) > 0): ?>
+												<i class="fa fa-star"></i>
+											<?php else: ?>
+												<i class="fa fa-star-o"></i>
+											<?php endif; ?>
+										<?php endfor; ?>
+										<hr>
+										<p><?php echo $row[3]; ?></p>
+									</div>
+								</div>
+							</div>
 						<?php endforeach; ?>
 					<?php elseif(isset($_GET['settings'])): ?>
 						<div class="user-account-settings">

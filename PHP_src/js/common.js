@@ -9,11 +9,43 @@ var addMorePosts = function(jsonObj){
 	});
 }
 
+var addToCart = function(jsonObj){
+	console.log(jsonObj);
+	var obj = JSON.parse(jsonObj);
+	$.each(obj, function(index,value){
+		var html = '<div class="product-posts"><div class="row"><div class="col-md-4"><div class="row"><a href="product_page.php?id=' + value['id'] + '"><img src="img_default/default-prod.jpg" style="width:100%;height:100%;"></a></div></div><div class="col-md-8"><h4 style="margin-top: 0px;"><a href="product_page.php?id=' + value['id'] + '">' + value['prod_name'] + '</a></h4><p>Price: ' + value['price'] + '</p><a class="btn btn-danger" href="#"><i class="fa fa-trash-o fa-lg"></i> Delete</a></div></div></div><hr>';
+		$('.modal-body').append(html);
+	});
+}
+
 var toType = function(obj) {
   return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 }
 
 $(document).ready(function(){
+	$('.fa-shopping-cart').click(function(){
+		$.ajax({url: 'get_products.php',
+		 data: {action: 'getCart'},
+		 type: 'post',
+		 success: function(output){
+		 		addToCart(output);
+		 }
+		});
+	});
+	$('.add-cart').click(function(){
+		var prodId = $('#prod-id').text();
+		$.ajax({ url: 'get_products.php',
+		 data: {action: 'addToCart', proId: prodId},
+		 type: 'post',
+		 success: function(output){
+		 			if(output != 1){
+		 				$('.add-to-cart').empty();
+			 			$('.add-to-cart').append('<p class="navbar-text">Added to shopping cart.<p>');
+		 			}
+		 			console.log(output);
+		 		  }
+		});
+	});
 	$('.load_more.btn.btn-primary').click(function(){
 		$.ajax({ url: 'get_products.php',
          data: {action: 'mainPageGet'},
@@ -41,4 +73,5 @@ $(document).ready(function(){
                   }
 		});
 	});
+	$("[rel=tooltip]").tooltip({ placement: 'bottom'});
 });

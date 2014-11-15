@@ -28,7 +28,9 @@
 		            <a class="navbar-brand" href="index.php">BlackBOX Books</a>
 		        </div>
 		        <?php if(isset($_SESSION['usrId'])): ?>
-		            <p class="navbar-text">Signed in as <?php echo $_SESSION['username']; ?></p>
+		            <p class="navbar-text">Signed in as <a href="user_profile.php?id=<?php echo $_SESSION['usrId']; ?>"><?php echo $_SESSION['username']; ?></a></p>
+		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-plus-circle fa-2x" rel="tooltip" title="add product"></i></a></p>
+		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-shopping-cart fa-2x" rel="tooltip" title="Shopping Cart" data-toggle="modal" data-target="#myModal"></i></a></p>
 		        <?php else: ?>
 		        	<a href="login.php"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
 		        <?php endif; ?>
@@ -40,13 +42,11 @@
 				</form>
 				<ul class="nav navbar-nav navbar-right">
 		        	<li class="dropdown">
-		        		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-		        			Categories
+		        		<a href="category.php?category=Books" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		        			Books
 		        			<span class="caret"></span>
 		        		</a>
 		        		<ul class="dropdown-menu" role="menu">
-		        			<li><a href="category.php?category=Books">Books</a></li>
-		        			<li class="divider"></li>
 		        			<li><a href="category.php?category=Fiction">  Fiction</a></li>
 		        			<li><a href="category.php?category=Non-Fiction">  Non-Fiction</a></li>
 		        		</ul>
@@ -54,3 +54,19 @@
 		        </ul>
 		        </div><!--/.nav-collapse -->
 	    </nav>
+	    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Shopping Cart</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
