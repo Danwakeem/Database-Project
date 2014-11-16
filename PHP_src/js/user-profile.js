@@ -1,3 +1,4 @@
+//I think I am just going to give up on this stupid script and just make this php :)
 $(document).ready(function(){
 	/*
 	$('.list-group-item.settings').click(function(){
