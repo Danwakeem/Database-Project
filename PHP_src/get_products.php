@@ -9,7 +9,43 @@
 			case 'moreFromCategory': moreFromCategory(); break;
 			case 'addToCart' : $prod_id = $_POST['proId']; addToShoppingCart($prod_id); break;
 			case 'getCart' : getShoppingCart(); break;
+			case 'rmCart' : $prod_id = $_POST['proId']; rmShoppingCart($prod_id); break;
 		}
+	}
+
+	function getProfilePicture($userId){
+		include 'dbConnect.php';
+		$userTable = 'user';
+
+		$con = dbConnect();
+		$sql = "SELECT profile_picture FROM $userTable WHERE user_id = $userId";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			while($row = mysqli_fetch_array($result)){
+				$picture = $row[0];
+			}
+			return $picture;
+		}
+	}
+
+	function rmShoppingCart($prod_id){
+		include 'dbConnect.php';
+		session_start();
+		$prodOrders = 'product_orders';
+		$cartId = $_SESSION['shoppingCartId'];
+
+		$con = dbConnect();
+		$sql = "DELETE FROM $prodOrders WHERE order_id = $cartId and product_id = $prod_id";
+		$result = mysqli_query($con,$sql);
+
+		if($result){
+			echo 1;
+		}
+		else {
+			echo 0;
+		}
+
 	}
 
 	function getShoppingCart(){
@@ -31,7 +67,8 @@
       				'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
       				'price' => $row['price'],
-      				'user_id' => $row['user_id']
+      				'user_id' => $row['user_id'],
+      				'featured_img'=> $row['featured_image']
    				);
 			}
 			echo json_encode($arr);
@@ -97,7 +134,8 @@
 					'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
       				'price' => $row['price'],
-      				'user_id' => $row['user_id']
+      				'user_id' => $row['user_id'],
+      				'featured_img' => $row['featured_image']
 				);
 			}
 			return $arr;
@@ -217,7 +255,8 @@
       				'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
       				'price' => $row['price'],
-      				'user_id' => $row['user_id']
+      				'user_id' => $row['user_id'],
+      				'featured_img'=> $row['featured_image']
    				);
 			}
 			echo json_encode($arr);
@@ -244,7 +283,8 @@
       				'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
       				'price' => $row['price'],
-      				'user_id' => $row['user_id']
+      				'user_id' => $row['user_id'],
+      				'featured_img'=> $row['featured_image']
    				);
 			}
 			echo json_encode($arr);
@@ -273,7 +313,8 @@
       				'prod_name' => $row['prod_name'],
       				'prod_desc' => $row['prod_desc'],
       				'price' => $row['price'],
-      				'user_id' => $row['user_id']
+      				'user_id' => $row['user_id'],
+      				'featured_img'=> $row['featured_image']
    				);
 			}
 			echo json_encode($arr);

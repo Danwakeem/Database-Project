@@ -9,7 +9,7 @@
 		<div class="product-header">
 			<h1><?php echo $arr['prod_name']; ?></h1>
 			<hr>
-			<img src="img_default/default-prod.jpg" style="width:100%; height:100%;">
+			<img src="<?php echo $arr['featured_img']; ?>" style="width:100%; height:100%;">
 		</div>
 		<div class="row">
 			<div class="col-md-6">
