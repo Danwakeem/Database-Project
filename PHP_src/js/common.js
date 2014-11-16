@@ -23,6 +23,18 @@ var toType = function(obj) {
 }
 
 $(document).ready(function(){
+	$('.profile-pic').ready(function(){
+		var userId = $('.profile-pic').data('userid');
+		console.log(userId);
+		$.ajax({url: 'get_products.php',
+			 data: {action: 'profile-pic', usrId: userId},
+			 type: 'post',
+			 success: function(output){
+			 		console.log(output);
+			 		$('.profile-pic').attr('src',output);
+			 }
+		});
+	});
 	$('.fa-shopping-cart').click(function(){
 		if($('.modal-body').is(':empty')){
 			$.ajax({url: 'get_products.php',

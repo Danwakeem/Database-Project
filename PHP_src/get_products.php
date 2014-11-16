@@ -10,6 +10,7 @@
 			case 'addToCart' : $prod_id = $_POST['proId']; addToShoppingCart($prod_id); break;
 			case 'getCart' : getShoppingCart(); break;
 			case 'rmCart' : $prod_id = $_POST['proId']; rmShoppingCart($prod_id); break;
+			case 'profile-pic' : $userId =$_POST['usrId']; getProfilePicture($userId); break;
 		}
 	}
 
@@ -25,7 +26,7 @@
 			while($row = mysqli_fetch_array($result)){
 				$picture = $row[0];
 			}
-			return $picture;
+			echo $picture;
 		}
 	}
 
@@ -145,9 +146,9 @@
 	function userReviews($userId){
 		include 'dbConnect.php';
 		$reviewTable = 'reviews';
-
+		
 		$con = dbConnect();
-		$sql = "SELECT * FROM $reviewTable WHERE user_id = $userId ORDER BY review_id DESC";
+		$sql = "SELECT r.*, u.profile_picture FROM $reviewTable as r, user as u WHERE r.reviewer_id = u.user_id and r.user_id = $userId ORDER BY review_id DESC";
 		$result = mysqli_query($con,$sql);
 
 		if($result){

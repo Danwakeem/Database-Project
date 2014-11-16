@@ -4,9 +4,7 @@
 	error_reporting(E_ALL);
 	GLOBAL $con;
 
-	function dbConnect(){
-
-		
+	function dbConnect(){	
 		$host = "localhost"; // Host name 
 		$username = "root"; // Mysql username 
 		$password = "root"; // Mysql password 
@@ -20,8 +18,8 @@
 	}
 
 	// Called to close the connection
-	function closeMySQL(){
-		mysql_close($con);
+	function closeMySQL($connnection){
+		mysql_close($connection);
 	}
 
 ?> 
