@@ -29,8 +29,8 @@
 		        </div>
 		        <?php if(isset($_SESSION['usrId'])): ?>
 		            <p class="navbar-text">Signed in as <a href="user_profile.php?id=<?php echo $_SESSION['usrId']; ?>"><?php echo $_SESSION['username']; ?></a></p>
-		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-plus-circle fa-2x" rel="tooltip" title="add product"></i></a></p>
-		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-shopping-cart fa-2x" rel="tooltip" title="Shopping Cart" data-toggle="modal" data-target="#myModal"></i></a></p>
+		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-plus-circle fa-2x" rel="tooltip" title="add product"  data-toggle="modal" data-target="#addProduct"></i></a></p>
+		            <p class="navbar-text" style="margin: 11px 15px 0px 15px;"><a href="#"><i class="fa fa-shopping-cart fa-2x" rel="tooltip" title="Shopping Cart" data-toggle="modal" data-target="#shoppingCart"></i></a></p>
 		        <?php else: ?>
 		        	<a href="login.php"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
 		        <?php endif; ?>
@@ -55,17 +55,68 @@
 		        </div><!--/.nav-collapse -->
 	    </nav>
 	    <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Shopping Cart</h4>
-      </div>
-      <div class="modal-body"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+		<div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Shopping Cart</h4>
+		      </div>
+		      <div class="modal-body"></div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<form role="form">
+			      	<div class="upload-text">
+				    	<div class="row">
+				    		<div class="col-md-6">
+								<div class="settings-group">
+									<h3>Product Title</h3>
+									<input type="text" class="form-control" placeholder="Title">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="settings-group">
+									<h3>Price</h3>
+									<input type="text" class="form-control" placeholder="Price">
+								</div>
+							</div>
+						</div>
+						<div class="settings-group">
+							<h3>Product description</h3>
+							<textarea class="form-control" rows="3" placeholder="Product Description"></textarea>
+						</div>
+						<div class="settings-group">
+							<h3>Category</h3>
+							<select class="form-control">
+								<option>None</option>
+	  							<option>Fiction</option>
+	  							<option>Non-Fiction</option>
+							</select>
+						</div>
+						<div class="settings-group">
+							<label for="exampleInputFile">Featured Image</label>
+						    <input type="file" id="exampleInputFile">
+    						<p class="help-block">JPEG only</p>
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>

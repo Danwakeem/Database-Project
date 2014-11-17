@@ -116,6 +116,10 @@ a:hover{
   margin-left: 20%;
 }
 
+.upload-text{
+  margin: 0px 50px;
+}
+
 /* Not sure if this is relevent */
 
 .form-signin {
