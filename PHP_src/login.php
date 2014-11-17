@@ -16,6 +16,11 @@
 
     <div class="container">
       <div class="margin-top-login">
+        <?php if(isset($_GET['error'])): ?>
+          <div class="form-signin bs-callout bs-callout-danger">
+            <h4>Wrong username or password</h4>
+          </div>
+        <?php endif; ?>
         <form class="form-signin" role="form" method="POST" action="checklogin.php">
           <h2 class="form-signin-heading">Please sign in</h2>
           <div class="input-group margin-bottom-sm">

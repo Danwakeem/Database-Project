@@ -120,6 +120,26 @@ a:hover{
   margin: 0px 50px;
 }
 
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+
+.bs-callout p:last-child {
+margin-bottom: 0;
+}
+
 /* Not sure if this is relevent */
 
 .form-signin {

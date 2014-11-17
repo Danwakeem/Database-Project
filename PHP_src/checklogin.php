@@ -39,7 +39,7 @@
 		header("location:index.php");
 	}
 	else {
-		echo "Wrong username and or Password. Sorry.";
+		header("location:login.php?error=1");
 	}
 	// Flush the ob :) 
 	ob_end_flush();

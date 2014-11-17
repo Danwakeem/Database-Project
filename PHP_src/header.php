@@ -77,40 +77,40 @@
 		        <h4 class="modal-title" id="myModalLabel">Add Product</h4>
 		      </div>
 		      <div class="modal-body">
-		      	<form role="form">
+		      	<form role="form" action="add_product.php" method="post" enctype="multipart/form-data">
 			      	<div class="upload-text">
 				    	<div class="row">
 				    		<div class="col-md-6">
 								<div class="settings-group">
 									<h3>Product Title</h3>
-									<input type="text" class="form-control" placeholder="Title">
+									<input type="text" class="form-control" name="title" placeholder="Title">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="settings-group">
 									<h3>Price</h3>
-									<input type="text" class="form-control" placeholder="Price">
+									<input type="number" step="0.01" class="form-control" name="price" placeholder="Price">
 								</div>
 							</div>
 						</div>
 						<div class="settings-group">
 							<h3>Product description</h3>
-							<textarea class="form-control" rows="3" placeholder="Product Description"></textarea>
+							<textarea class="form-control" rows="3" name="desc" placeholder="Product Description"></textarea>
 						</div>
 						<div class="settings-group">
 							<h3>Category</h3>
-							<select class="form-control">
-								<option>None</option>
-	  							<option>Fiction</option>
-	  							<option>Non-Fiction</option>
+							<select class="form-control" name="category">
+								<option value="None">None</option>
+	  							<option value="Fiction">Fiction</option>
+	  							<option value="Non-Fiction">Non-Fiction</option>
 							</select>
 						</div>
 						<div class="settings-group">
 							<label for="exampleInputFile">Featured Image</label>
-						    <input type="file" id="exampleInputFile">
+						    <input type="file" id="exampleInputFile" name="featured-pic">
     						<p class="help-block">JPEG only</p>
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" name="submit" id="submit" class="btn btn-default">Submit</button>
 					</div>
 				</form>
 		      </div>
