@@ -2,7 +2,7 @@
 	include_once 'header.php';
 	include_once 'get_products.php';
 	$category = $_GET['category'];
-	$products = categoryProducts($category);
+	$products = getProducts("categoryProducts",$category);
 	$_SESSION['category_offset'] = 10;
 	$_SESSION['category'] = $category;
 ?>

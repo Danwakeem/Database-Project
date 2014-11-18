@@ -14,6 +14,82 @@
 		}
 	}
 
+	function getProducts($action,$data){
+		switch ($action){
+			case 'mainPage':
+				$sql = "SELECT * FROM product WHERE sold != 1 ORDER BY id DESC LIMIT 10";
+				return arrResults($sql);
+				break;
+			case 'productPage':
+				$sql = "SELECT u.username, p.* FROM product as p, user as u WHERE u.user_id = p.user_id AND p.id = $data";
+				return keyValueResults($sql);
+				break;
+			case 'userReviews':
+				$sql = "SELECT r.*, u.profile_picture FROM reviews as r, user as u WHERE r.reviewer_id = u.user_id and r.user_id = $data ORDER BY review_id DESC";
+				return arrResults($sql);
+				break;
+			case 'userProducts':
+				$sql = "SELECT * FROM product WHERE sold != 1 AND user_id = $data LIMIT 10";
+				return arrResults($sql);
+				break;
+			case 'soldProducts':
+				$sql = "SELECT * FROM product WHERE sold = 1 AND user_id = $data LIMIT 10";
+				return arrResults($sql);
+				break;
+			case 'search':
+				$sql = "SELECT * FROM product WHERE sold != 1 AND prod_name LIKE '%$data%' ORDER BY id DESC LIMIT 10";
+				return arrResults($sql);
+				break;
+			case 'categoryProducts':
+				$sql = "SELECT DISTINCT p.* FROM product AS p, category AS c, product_category AS pc WHERE p.id = pc.product_id AND c.cat_name = pc.category_name AND p.sold != 1 AND c.cat_name = '$data' OR c.parent_name = '$data' ORDER BY p.id DESC LIMIT 10";
+				return arrResults($sql);
+				break;
+			default:
+				break;
+		}
+
+	}
+
+	function arrResults($statement){
+		include 'dbConnect.php';
+
+		$con = dbConnect();
+		$sql = $statement;
+		$result = mysqli_query($con,$sql);
+		if($result){
+			$arr = [];
+			$i = 0;
+			while($row = mysqli_fetch_array($result)){
+				$arr[$i++] = $row;
+			}
+			return $arr;
+		}
+		return -1;
+	}
+
+	function keyValueResults($statement){
+		include 'dbConnect.php';
+
+		$con = dbConnect();
+		$sql = $statement;
+		$result = mysqli_query($con,$sql);
+		if($result){
+			$arr = array();
+			while($row = mysqli_fetch_array($result)){
+				$arr = array(
+					'id' => $row['id'],
+					'username' => $row['username'],
+					'prod_name' => $row['prod_name'],
+      				'prod_desc' => $row['prod_desc'],
+      				'price' => $row['price'],
+      				'user_id' => $row['user_id'],
+      				'featured_img' => $row['featured_image']
+				);
+			}
+			return $arr;
+		}
+	}
+
 	function getProfilePicture($userId){
 		include 'dbConnect.php';
 		$userTable = 'user';
@@ -95,146 +171,6 @@
 		else {
 			echo -1;
 		}
-	}
-
-	function mainPageProducts(){
-		include 'dbConnect.php';
-		$productTable = "product";
-
-		$con = dbConnect();
-		$sql = "SELECT * FROM $productTable WHERE sold != 1 ORDER BY id DESC LIMIT 10";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}
-		return -1;
-
-	}
-
-	function productPageInfo($prodId){
-		include 'dbConnect.php';
-		$productTable = "product";
-		$userTable = "user";
-
-		$con = dbConnect();
-		$sql = "SELECT u.username, p.* FROM $productTable as p, $userTable as u WHERE u.user_id = p.user_id AND p.id = $prodId";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = array();
-			while($row = mysqli_fetch_array($result)){
-				$arr = array(
-					'id' => $row['id'],
-					'username' => $row['username'],
-					'prod_name' => $row['prod_name'],
-      				'prod_desc' => $row['prod_desc'],
-      				'price' => $row['price'],
-      				'user_id' => $row['user_id'],
-      				'featured_img' => $row['featured_image']
-				);
-			}
-			return $arr;
-		}
-	} 
-
-	function userReviews($userId){
-		include 'dbConnect.php';
-		$reviewTable = 'reviews';
-		
-		$con = dbConnect();
-		$sql = "SELECT r.*, u.profile_picture FROM $reviewTable as r, user as u WHERE r.reviewer_id = u.user_id and r.user_id = $userId ORDER BY review_id DESC";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}	
-	}
-
-	function userProducts($userId){
-		include 'dbConnect.php';
-		$productTable = "product";
-
-		$con = dbConnect();
-		$sql = "SELECT * FROM $productTable WHERE sold != 1 AND user_id = $userId LIMIT 10";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}
-	} 
-
-	function userSoldProducts($userId){
-		include 'dbConnect.php';
-		$productTable = "product";
-
-		$con = dbConnect();
-		$sql = "SELECT * FROM $productTable WHERE sold = 1 AND user_id = $userId LIMIT 10";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}
-	}
-
-	function search($search){
-		include 'dbConnect.php';
-		$productTable = "product";
-
-		$con = dbConnect();
-		$sql = "SELECT * FROM $productTable WHERE sold != 1 AND prod_name LIKE '%$search%' ORDER BY id DESC LIMIT 10";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}
-		return 1;
-	}
-
-	function categoryProducts($category){
-		include 'dbConnect.php';
-		$productTable = "product";
-		$categoryTable = "category";
-		$prodCatTable = "product_category";
-
-		$con = dbConnect();
-		$sql = "SELECT DISTINCT p.* FROM $productTable AS p, $categoryTable AS c, $prodCatTable AS pc WHERE p.id = pc.product_id AND c.cat_name = pc.category_name AND p.sold != 1 AND c.cat_name = '$category' OR c.parent_name = '$category' ORDER BY p.id DESC LIMIT 10";
-		$result = mysqli_query($con,$sql);
-
-		if($result){
-			$arr = [];
-			$i = 0;
-			while($row = mysqli_fetch_array($result)){
-				$arr[$i++] = $row;
-			}
-			return $arr;
-		}
-		return 1;
 	}
 
 	function mainPageGetMore(){

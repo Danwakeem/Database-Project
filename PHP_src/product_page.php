@@ -2,7 +2,7 @@
 	include_once 'header.php';
 	include_once 'get_products.php';
 	$prodId = $_GET['id'];
-	$arr = productPageInfo($prodId);
+	$arr = getProducts("productPage",$prodId);
 
 ?>
 	<div class="product-page">

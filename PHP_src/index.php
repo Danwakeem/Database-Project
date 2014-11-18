@@ -13,7 +13,7 @@
 
 <div class="recent-products">
 	<?php include_once('get_products.php');
-		$arr = mainPageProducts();
+		$arr = getProducts("mainPage",0);
 		foreach($arr as $row):
 	?>
 		<div class="product-posts">

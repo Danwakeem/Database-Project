@@ -25,7 +25,7 @@
 			<div class="col-md-8">
 				<div class="toggle">
 					<?php if(isset($_GET['sold'])): ?>
-						<?php $sold =  userSoldProducts($userId); ?>
+						<?php $sold =  getProducts("soldProducts",$userId); ?>
 						<h1>Sold Products</h1>
 						<hr>
 						<?php foreach($sold as $row): ?>
@@ -46,7 +46,7 @@
 							<hr>
 						<?php endforeach; ?>
 					<?php elseif(isset($_GET['reviews'])): ?>
-						<?php $reviews = userReviews($userId); ?>
+						<?php $reviews = getProducts("userReviews",$userId); ?>
 						<h1>Reviews</h1>
 						<hr>
 						<?php foreach ($reviews as $row): ?>
@@ -154,7 +154,7 @@
 							</form>
 						</div>
 					<?php else: ?>
-						<?php $postings =  userProducts($userId); ?>
+						<?php $postings = getProducts("userProducts",$userId); ?>
 						<h1>Recent Postings</h1>
 						<hr>
 						<?php foreach($postings as $row): ?>

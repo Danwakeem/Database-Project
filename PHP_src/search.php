@@ -5,7 +5,7 @@
 	//Block all SQL injections
 	$search = mysql_real_escape_string($search);
 
-	$products = search($search);
+	$products = getProducts("search",$search);
 	//session_start(); 
 	$_SESSION['search_offset'] = 10;
 	$_SESSION['search'] = $search;
