@@ -1,0 +1,9 @@
+Users are the numbered directories and are arranged as such:
+
+	Dan:	1  2  3
+	Matt:	4  5  6
+	Donald:	7  8  9
+	Kai:	10 11 12
+
+"product_categories" contains the queries needed to link the
+product and categories table.
