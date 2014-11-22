@@ -5,6 +5,10 @@ INSERT INTO `category` VALUES ('Books','none'),
 INSERT INTO `orders` VALUES (1,1,1),
                             (2,1,0);
 
+---
+--- (product_id, product_name, product_desc, product_pic, category_id, sold)
+--- "sold" is "1" for true, "0" for false
+---
 INSERT INTO `product` VALUES (1,'Harry Potter and the socers stone','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',10.5,1,0),
                              (2,'Harry Potter and chamber of secrets','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',9.6,1,0),
                              (3,'Harry Potter and prisoner of azkaban','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',8.5,1,0),
