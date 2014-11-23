@@ -1,3 +1,19 @@
+--
+-- This file creates the database and tables. It then calls each of the sql
+-- files contained in the folders. If things aren't being inserted, check the
+-- SOURCE commands at the bottom to make sure yours isn't commented out.
+--
+
+--
+-- Create database
+--
+DROP DATABASE IF EXISTS ecom;
+CREATE DATABASE ecom;
+USE DATABASE ecom;
+
+--
+-- Create tables
+--
 CREATE TABLE `category` (
   `cat_name` varchar(128) NOT NULL,
   `parent_name` varchar(128) NOT NULL DEFAULT 'none',
@@ -67,3 +83,55 @@ CREATE TABLE `user` (
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `credit_card_UNIQUE` (`credit_card`)
 );
+
+--
+-- Call other SQL files
+--
+SOURCE category/dan_categories.sql;
+SOURCE category/donald_categories.sql;
+SOURCE category/kai_categories.sql;
+SOURCE category/matt_categories.sql;
+
+SOURCE orders/dan_orders.sql;
+-- SOURCE orders/donald_orders.sql;
+-- SOURCE orders/kai_orders.sql;
+-- SOURCE orders/matt_orders.sql;
+
+SOURCE product/1/fiction.sql;
+SOURCE product/1/non_fiction.sql;
+SOURCE product/2/fiction.sql;
+SOURCE product/2/non_fiction.sql;
+SOURCE product/3/fiction.sql;
+SOURCE product/3/non_fiction.sql;
+SOURCE product/4/bluray.sql;
+SOURCE product/4/dvd.sql;
+SOURCE product/4/vhs.sql;
+SOURCE product/5/bluray.sql;
+SOURCE product/5/dvd.sql;
+SOURCE product/5/vhs.sql;
+SOURCE product/6/bluray.sql;
+SOURCE product/6/dvd.sql;
+SOURCE product/6/vhs.sql;
+-- DONALD AND KAI ADD YOUR STUFF HERE
+
+SOURCE product_category/bluray.sql;
+SOURCE product_category/dvd.sql;
+SOURCE product_category/fiction.sql;
+SOURCE product_category/non_fiction.sql;
+SOURCE product_category/vhs.sql;
+-- DONALD AND KAI ADD YOUR STUFF HERE
+
+SOURCE product_orders/dan_orders.sql;
+-- SOURCE product_orders/donald_orders.sql;
+-- SOURCE product_orders/kai_orders.sql;
+-- SOURCE product_orders/matt_orders.sql;
+
+SOURCE reviews/dan_reviews.sql;
+-- SOURCE reviews/donald_reviews.sql;
+-- SOURCE reviews/kai_reviews.sql;
+SOURCE reviews/matt_reviews.sql;
+
+SOURCE user/dan_users.sql;
+SOURCE user/donald_users.sql;
+SOURCE user/kai_users.sql;
+SOURCE user/matt_users.sql;
