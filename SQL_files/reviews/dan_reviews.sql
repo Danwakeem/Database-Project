@@ -2,6 +2,7 @@
 -- review id# 1 - 6
 --
 
+-- Dan is going to fix the date?
 INSERT INTO `ecom`.`reviews`
 (`review_id`,
 `user_id`,

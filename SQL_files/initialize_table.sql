@@ -95,7 +95,7 @@ SOURCE category/matt_categories.sql;
 SOURCE orders/dan_orders.sql;
 -- SOURCE orders/donald_orders.sql;
 -- SOURCE orders/kai_orders.sql;
--- SOURCE orders/matt_orders.sql;
+SOURCE orders/matt_orders.sql;
 
 SOURCE product/1/fiction.sql;
 SOURCE product/1/non_fiction.sql;
@@ -124,7 +124,7 @@ SOURCE product_category/vhs.sql;
 SOURCE product_orders/dan_orders.sql;
 -- SOURCE product_orders/donald_orders.sql;
 -- SOURCE product_orders/kai_orders.sql;
--- SOURCE product_orders/matt_orders.sql;
+SOURCE product_orders/matt_orders.sql;
 
 SOURCE reviews/dan_reviews.sql;
 -- SOURCE reviews/donald_reviews.sql;

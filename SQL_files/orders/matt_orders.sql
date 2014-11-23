@@ -1,15 +1,14 @@
 --
--- order id# 1 - 3
+-- order id# 4 - 6
 --
 
--- Still need one more order according to Categories document?
 INSERT INTO `orders`
 (`order_id`,
 `user_id`,
 `processed`)
 VALUES
-(1,
-1,
+(4,
+4,
 1);
 
 INSERT INTO `orders`
@@ -17,6 +16,15 @@ INSERT INTO `orders`
 `user_id`,
 `processed`)
 VALUES
-(2,
-1,
+(5,
+5,
 0);
+
+INSERT INTO `orders`
+(`order_id`,
+`user_id`,
+`processed`)
+VALUES
+(6,
+6,
+1);

@@ -12,7 +12,8 @@ style with the same code style. In fact, it might be easier to copy somebody
 else's file and replace their information with your own.
 
 The initialize_table file will call all of the sql files in the directories so
-check to make sure your submissions will work with it.
+check to make sure your submissions will work with it. Make sure to check the
+product_orders folder.
 
 
 

@@ -1,69 +1,173 @@
-INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
-VALUES
-('Memento',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+--
+-- id# 121 - 130
+--
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Talladega Nights',
+(121,
+'Memento',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+12.0,
+6,
+0,
+'img_default/6/featured-products/121.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Pride and Prejudice',
+(122,
+'Talladega Nights',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+11,
+6,
+1,
+'img_default/6/featured-products/122.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Johnny English',
+(123,
+'Pride and Prejudice',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+8.5,
+6,
+0,
+'img_default/6/featured-products/123.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Hot Rod',
+(124,
+'Johnny English',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+3,
+6,
+1,
+'img_default/6/featured-products/124.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Godzilla',
+(125,
+'Hot Rod',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+11.5,
+6,
+0,
+'img_default/6/featured-products/125.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('The Naked Gun',
+(126,
+'Godzilla',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+1.5,
+6,
+0,
+'img_default/6/featured-products/126.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Star Wars: Episode IV',
+(127,
+'The Naked Gun',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+18.25,
+6,
+1,
+'img_default/6/featured-products/127.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('Ratatoille',
+(128,
+'Star Wars: Episode IV',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+25.5,
+6,
+0,
+'img_default/6/featured-products/128.jpg');
 
 INSERT INTO `ecom`.`product`
-(`prod_name`, `prod_desc`, `user_id`)
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
 VALUES
-('The Italian Job',
+(129,
+'Ratatoille',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
-6);
+24.25,
+6,
+0,
+'img_default/6/featured-products/129.jpg');
+
+INSERT INTO `ecom`.`product`
+(`id`,
+`prod_name`,
+`prod_desc`,
+`price`,
+`user_id`,
+`sold`,
+`featured_image`)
+VALUES
+(130,
+'The Italian Job',
+'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
+14.5,
+6,
+1,
+'img_default/6/featured-products/130.jpg');
