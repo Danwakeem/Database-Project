@@ -1,5 +1,5 @@
 --
--- Dan's users (1, 2,3 )
+-- Dan's users (1, 2,3)
 --
 
 INSERT INTO `ecom`.`user`
@@ -11,7 +11,8 @@ INSERT INTO `ecom`.`user`
 `street`,
 `city`,
 `state`,
-`zip`)
+`zip`,
+`profile_picture`)
 VALUES
 ('CoolCrab21',
 'password',
@@ -21,7 +22,8 @@ VALUES
 '2700 Mountain View Dr',
 'Boobladesh',
 'California',
-'75534');
+'75534',
+'img_default/default-user.jpg');
 
 INSERT INTO `ecom`.`user`
 (`username`,
@@ -32,7 +34,8 @@ INSERT INTO `ecom`.`user`
 `street`,
 `city`,
 `state`,
-`zip`)
+`zip`,
+`profile_picture`)
 VALUES
 ('DinoMaster34',
 'password',
@@ -42,7 +45,8 @@ VALUES
 '2905 Turtle Creek Dr.',
 'Vancover',
 'Oregon',
-'79336');
+'79336',
+'img_default/default-user.jpg');
 
 INSERT INTO `ecom`.`user`
 (`username`,
@@ -53,7 +57,8 @@ INSERT INTO `ecom`.`user`
 `street`,
 `city`,
 `state`,
-`zip`)
+`zip`,
+`profile_picture`)
 VALUES
 ('Danwakeem',
 'password',
@@ -63,4 +68,5 @@ VALUES
 '2905 Beez Wax ln.',
 'New York',
 'New York',
-'60457');
+'60457',
+'img_default/default-user.jpg');

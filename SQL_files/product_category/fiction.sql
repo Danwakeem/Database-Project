@@ -1,3 +1,7 @@
+--
+-- id# 1 - 30 for fiction
+--
+
 INSERT INTO `ecom`.`product_category`
 (`product_id`,
 `category_id`)
