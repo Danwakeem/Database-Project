@@ -1,3 +1,6 @@
+-- 
+-- review id# 19 - 24
+--
 INSERT INTO `ecom`.`reviews`
 (`review_id`,
 `user_id`,
