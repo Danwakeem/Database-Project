@@ -85,4 +85,4 @@ VALUES
 16.9,
 10,
 1,
-'img_default/10/featured-products/184.jpg');
+'img_default/10/featured-products/185.jpg');
