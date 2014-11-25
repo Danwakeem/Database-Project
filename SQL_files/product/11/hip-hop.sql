@@ -66,7 +66,7 @@ VALUES
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
 13.9,
 11,
-0,
+1,
 'img_default/11/featured-products/219.jpg');
 
 INSERT INTO `ecom`.`product`
@@ -83,5 +83,5 @@ VALUES
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
 10.9,
 11,
-0,
+1,
 'img_default/11/featured-products/220.jpg');
