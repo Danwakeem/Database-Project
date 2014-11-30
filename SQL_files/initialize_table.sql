@@ -94,7 +94,7 @@ SOURCE category/matt_categories.sql;
 
 SOURCE orders/dan_orders.sql;
 -- SOURCE orders/donald_orders.sql;
--- SOURCE orders/kai_orders.sql;
+SOURCE orders/kai_orders.sql;
 SOURCE orders/matt_orders.sql;
 
 SOURCE product/1/fiction.sql;
@@ -112,23 +112,39 @@ SOURCE product/5/vhs.sql;
 SOURCE product/6/bluray.sql;
 SOURCE product/6/dvd.sql;
 SOURCE product/6/vhs.sql;
--- DONALD AND KAI ADD YOUR STUFF HERE
+-- DONALD ADD YOUR STUFF HERE
+SOURCE product/10/country.sql;
+SOURCE product/10/hip-hop.sql;
+SOURCE product/10/pop.sql;
+SOURCE product/10/rock.sql;
+SOURCE product/11/country.sql;
+SOURCE product/11/hip-hop.sql;
+SOURCE product/11/pop.sql;
+SOURCE product/11/rock.sql;
+SOURCE product/12/country.sql;
+SOURCE product/12/hip-hop.sql;
+SOURCE product/12/pop.sql;
+SOURCE product/12/rock.sql;
 
 SOURCE product_category/bluray.sql;
 SOURCE product_category/dvd.sql;
 SOURCE product_category/fiction.sql;
 SOURCE product_category/non_fiction.sql;
 SOURCE product_category/vhs.sql;
--- DONALD AND KAI ADD YOUR STUFF HERE
+-- DONALD ADD YOUR STUFF HERE
+SOURCE product_category/country.sql;
+SOURCE product_category/hip-hop.sql;
+SOURCE product_category/pop.sql;
+SOURCE product_category/rock.sql;
 
 SOURCE product_orders/dan_orders.sql;
 -- SOURCE product_orders/donald_orders.sql;
--- SOURCE product_orders/kai_orders.sql;
+SOURCE product_orders/kai_orders.sql;
 SOURCE product_orders/matt_orders.sql;
 
 SOURCE reviews/dan_reviews.sql;
 -- SOURCE reviews/donald_reviews.sql;
--- SOURCE reviews/kai_reviews.sql;
+SOURCE reviews/kai_reviews.sql;
 SOURCE reviews/matt_reviews.sql;
 
 SOURCE user/dan_users.sql;
