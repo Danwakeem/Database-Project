@@ -77,7 +77,7 @@
 		        <h4 class="modal-title" id="myModalLabel">Add Product</h4>
 		      </div>
 		      <div class="modal-body">
-		      	<form role="form" action="add_product.php" method="post" enctype="multipart/form-data">
+		      	<form role="form" action="add_prod_fake.php" method="post" enctype="multipart/form-data">
 			      	<div class="upload-text">
 				    	<div class="row">
 				    		<div class="col-md-6">
