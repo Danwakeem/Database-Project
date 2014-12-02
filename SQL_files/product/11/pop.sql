@@ -15,7 +15,7 @@ VALUES
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.',
 10.9,
 11,
-1,
+2,
 'img_default/11/featured-products/186.jpg');
 
 INSERT INTO `ecom`.`product`
