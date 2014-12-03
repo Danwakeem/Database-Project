@@ -7,18 +7,10 @@ AUTHORS: Daniel Jarvis
 
 -------------------------
 This section has directories that are structured after the ER diagram and each
-section should have its own README if needed. Add your information in a similar
-style with the same code style. In fact, it might be easier to copy somebody
-else's file and replace their information with your own.
-
-The initialize_table file will call all of the sql files in the directories so
-check to make sure your submissions will work with it. Make sure to check the
-product_orders folder.
-
-
-
-//----DONALD AND KAI----\\
-Remember to write your reviews! They're still missing.
+section should have its own README if needed. The initialize_table.sql file will
+create the database and call all of the SQL files in their directories. The
+miscellaneous folder contains a table dump and information pertaining to the
+website.
 
 //----DAN----\\
 I've placed some of your files in the miscellaneous folder in case they need to

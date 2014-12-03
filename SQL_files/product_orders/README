@@ -1,2 +1,0 @@
-Pick an order_id from the order table and insert a few product_id's in.
-To keep things sane, pick order_id's and product_id's from your users.
