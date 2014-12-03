@@ -29,6 +29,7 @@ CREATE TABLE `category` (
 -- Dumping data for table `category`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `category` (`cat_name`, `parent_name`) VALUES
 ('Books', 'none'),
 ('Fiction', 'Books'),
@@ -50,6 +51,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `orders` (`order_id`, `user_id`, `processed`) VALUES
 (1, 1, 1),
 (2, 1, 0);
@@ -74,6 +76,7 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `product` (`id`, `prod_name`, `prod_desc`, `price`, `user_id`, `sold`, `featured_image`) VALUES
 (1, 'Harry Potter and the socers stone', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.', 10.5, 1, 0, 'img_default/1/featured-products/1.jpg'),
 (2, 'Harry Potter and chamber of secrets', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque ipsum mi, id laoreet diam cursus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus mauris augue, blandit nec scelerisque a, euismod non sem. Nulla vul.', 9.6, 1, 0, 'img_default/1/featured-products/2.jpg'),
@@ -157,6 +160,7 @@ CREATE TABLE `product_category` (
 -- Dumping data for table `product_category`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `product_category` (`product_id`, `category_name`) VALUES
 (1, 'Ficton'),
 (2, 'Ficton'),
@@ -240,6 +244,7 @@ CREATE TABLE `product_orders` (
 -- Dumping data for table `product_orders`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `product_orders` (`order_id`, `product_id`) VALUES
 (1, 61),
 (1, 63),
@@ -280,6 +285,7 @@ CREATE TABLE `reviews` (
 -- Dumping data for table `reviews`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `reviews` (`review_id`, `user_id`, `reviewer_id`, `review_text`, `rating`, `date`) VALUES
 (1, 2, 1, 'He shipped his orders in a timely maner and the product was as described. I would definitly recomend ordering from this guy.', 4, '2014-11-04 19:41:17'),
 (2, 2, 3, 'This guy took 3 weeks to ship his book. The book was in pretty fair conditon. Other than the time it took for him to ship the book everything was good.', 3, '2014-11-04 19:41:17'),
@@ -312,6 +318,7 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
+-- //----Keep here or pull to separate files?
 INSERT INTO `user` (`user_id`, `username`, `password`, `credit_card`, `first_name`, `last_name`, `street`, `city`, `state`, `zip`, `profile_picture`) VALUES
 (1, 'Danwakeem', 'password', '12344', 'Dan', 'Jarvis', '2700 Beez Wax ln.', 'McKinney', 'Texas', '75070', 'img_default/1/default-user.jpg'),
 (2, 'CoolCrab21', 'password', '1234567891234567', 'Kyle', 'Brofloski', '2700 Mountain View Dr', 'Boobladesh', 'California', '75534', 'img_default/2/user-2.jpg'),
