@@ -9,4 +9,5 @@ AUTHORS: Daniel Jarvis
 This section has directories that are structured after the ER diagram and each
 section should have its own README if needed. The initialize_table.sql file will
 create the database and call all of the SQL files in their directories. For
-quick viewing, the dump.sql file was taken directly from the website.
+quick viewing, the demo_site_database_dump.sql file was taken directly from
+the website.
