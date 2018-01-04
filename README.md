@@ -20,3 +20,4 @@ as we made a structured path that represents how the images would have been stor
 though we didn't have enough pictures for every product.
 
 Changes
+Other
