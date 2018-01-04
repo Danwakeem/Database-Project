@@ -18,3 +18,5 @@ To use the web interface, load the database from the demo_site_database_dump.sql
 file. The featured_pictures attribute for the products wont show up correctly
 as we made a structured path that represents how the images would have been stored, 
 though we didn't have enough pictures for every product.
+
+change
